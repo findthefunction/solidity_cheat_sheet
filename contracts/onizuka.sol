@@ -47,6 +47,8 @@ IERC20 public immutable token;
 // Also used to generate id for new campaigns.
 uint public count;
 // Mapping from id to Campaign
+mapping(uint => Campaign) public campaigns;
+// Mappijng from campaign id => pledger => amount pledged
 mapping(uint => mapping(address => uint)) public pledgeAmount;
 
 constructor(address _token) {
